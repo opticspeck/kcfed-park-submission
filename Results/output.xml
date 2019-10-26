@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on darwin)" generated="20191026 14:35:38.337">
+<suite id="s1" name="Tests" source="/Users/melmark/projects/rovingrover/piratekcfed/Tests">
+<suite id="s1-s1" name="Dashboard" source="/Users/melmark/projects/rovingrover/piratekcfed/Tests/Dashboard.robot">
+<test id="s1-s1-t1" name="About Page Loads and Is Functional">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191026 14:35:38.569" level="INFO">Opening browser 'chrome' to base url 'http://dandelion-buffalo-2yn8.squarespace.com'.</msg>
+<status status="PASS" starttime="20191026 14:35:38.569" endtime="20191026 14:35:42.094"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191026 14:35:42.095" endtime="20191026 14:35:42.248"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${PASSWORD_BOX}</arg>
+<arg>${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20191026 14:35:42.248" endtime="20191026 14:35:42.260"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_BOX}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<status status="PASS" starttime="20191026 14:35:42.260" endtime="20191026 14:35:42.278"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_ENTER_BUTTON}</arg>
+</arguments>
+<msg timestamp="20191026 14:35:42.279" level="INFO">Clicking element 'xpath=//div[@class="arrow-icon"]'.</msg>
+<status status="PASS" starttime="20191026 14:35:42.279" endtime="20191026 14:35:42.341"></status>
+</kw>
+<status status="PASS" starttime="20191026 14:35:38.568" endtime="20191026 14:35:42.341"></status>
+</kw>
+<kw name="Verify About Page Generates and Functions Correctly" library="About_App">
+<kw name="Verify Page Loaded" library="About_Vars">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SITE_TITLE}</arg>
+<arg>${TIME_OUT}</arg>
+</arguments>
+<status status="PASS" starttime="20191026 14:35:42.343" endtime="20191026 14:35:42.357"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${BUTTON}</arg>
+<arg>${TIME_OUT}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191026 14:35:47.945" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20191026 14:35:47.417" endtime="20191026 14:35:47.945"></status>
+</kw>
+<msg timestamp="20191026 14:35:47.946" level="FAIL">Element 'xpath=//a[@href="/volunteer-project"]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20191026 14:35:42.358" endtime="20191026 14:35:47.946"></status>
+</kw>
+<status status="FAIL" starttime="20191026 14:35:42.342" endtime="20191026 14:35:47.946"></status>
+</kw>
+<status status="FAIL" starttime="20191026 14:35:42.342" endtime="20191026 14:35:47.946"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191026 14:35:47.947" endtime="20191026 14:35:48.019"></status>
+</kw>
+<status status="PASS" starttime="20191026 14:35:47.946" endtime="20191026 14:35:48.019"></status>
+</kw>
+<tags>
+<tag>About</tag>
+<tag>BVT</tag>
+</tags>
+<status status="FAIL" starttime="20191026 14:35:38.568" endtime="20191026 14:35:48.020" critical="yes">Element 'xpath=//a[@href="/volunteer-project"]' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20191026 14:35:38.367" endtime="20191026 14:35:48.022"></status>
+</suite>
+<status status="FAIL" starttime="20191026 14:35:38.345" endtime="20191026 14:35:48.029"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">About</stat>
+<stat pass="0" fail="1">BVT</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Dashboard">Tests.Dashboard</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20191026 14:35:38.465" level="WARN">Imported resource file '/Users/melmark/projects/rovingrover/piratekcfed/Resources/PO/Contact_Vars.robot' is empty.</msg>
+<msg timestamp="20191026 14:35:38.466" level="WARN">Imported resource file '/Users/melmark/projects/rovingrover/piratekcfed/Resources/PO/Home_Vars.robot' is empty.</msg>
+<msg timestamp="20191026 14:35:38.468" level="WARN">Imported resource file '/Users/melmark/projects/rovingrover/piratekcfed/Resources/PO/Services_Vars.robot' is empty.</msg>
+</errors>
+</robot>
