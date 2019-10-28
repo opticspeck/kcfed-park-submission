@@ -1,2 +1,7 @@
-# piratekcfed
-park university's submission for the kc federal reserve 2019 code-a-thon
+## Park University, KC-FED 2019, MeL Mark, John Carrazco, Jay Canty, Vincent Payne
+## Background
+Our team's approach to the theme of "fostering entrepreneurship" was to balance the advantage that larger companies have over startups/entrepreneurs in being able to staff teams of QA testers to ensure the quality and integrity of their software/product. To this end, we wrote an automated regression suite in [Robot Framework](https://robotframework.org/), which is an automation language based on [Selenium](https://www.seleniumhq.org/). We followed the [Page Object Model](https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b) in structuring our repository as well as followed the best practices of [Robot Framework](https://robotframework.org/). So instead of hiring 20+ employees to test a product, a company could kickoff their automated suite and get their results more accurately, quickly, and cheaply.
+## Installation & Running
+In order to run this suite, you need to have [Robot Framework](https://robotframework.org/) installed (pip or brew works fine) as well as [chromedriver](https://chromedriver.chromium.org/downloads) in order to run these GUI-based tests in Chrome (which is what we used, had we had more time we would have made it cross-browser compatible).
+## Reporting
+To view the reports, simply hold CMD (Mac) or CNTRL (Windows) and click the Reports HTML file generated after each run. This reporting is great because at a high level, it allows for non-technical individuals to still understand whether or not their tests passed or failed. However, it is doubly fantastic for really digging in and debugging, as it features specific error logs and screenshots.
