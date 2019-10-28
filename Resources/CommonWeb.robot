@@ -7,20 +7,23 @@ Documentation  This Page Object represents the Common Objects for GUI Automation
 
 *** Variables ***
 ${BROWSER} =  chrome
-${PASSWORD} =  
 ${URL} =  http://dandelion-buffalo-2yn8.squarespace.com
 ${ENVIRONMENT} =
 ${PASSWORD_BOX} =  xpath=//input[@type="password"]
-${TIME_OUT} =  5
-${PASSWORD_ENTER_BUTTON} =  xpath=//div[@class="arrow-icon"]
+${TIME_OUT} =  30
+${PASSWORD_ENTER_BUTTON} =  xpath=//div[@class="icon-wrapper arrow"]
 *** Keywords ***
 Begin Web Test
     open browser  ${URL}  ${BROWSER}
     maximize browser window
+    # bypassing the password screen
     wait until page contains element  ${PASSWORD_BOX}  ${TIME_OUT}
+    wait until page contains element  ${PASSWORD_ENTER_BUTTON}  ${TIME_OUT}
     click element  ${PASSWORD_BOX}
-    press key  ${PASSWORD_BOX}  ${PASSWORD}
-    click element  ${PASSWORD_ENTER_BUTTON}
+    input text  ${PASSWORD_BOX}  password
+    # ascii code for the enter key
+    press key  ${PASSWORD_BOX}  \\13
+    # click element  ${PASSWORD_ENTER_BUTTON}
 
 End Web Test
     close all browsers
