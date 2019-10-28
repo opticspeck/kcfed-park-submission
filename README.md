@@ -14,5 +14,7 @@ In order to run this suite, you need to have [Robot Framework](https://robotfram
 - ```pip install --upgrade robotframework-requests```
 ## Reporting
 To view the reports, simply hold CMD (Mac) or CNTRL (Windows) and click the Reports HTML file generated after each run. This reporting is great because at a high level, it allows for non-technical individuals to still understand whether or not their tests passed or failed. However, it is doubly fantastic for really digging in and debugging, as it features specific error logs and screenshots.
+## Integration
+We made a [mock website](http://dandelion-buffalo-2yn8.squarespace.com) (password is 'password') that simulates a small business who runs things from their website. We implemented [build verification testing](https://www.softwaretestinghelp.com/bvt-build-verification-testing-process/) (BVTs) as well as functionality testing, such as pressing buttons and filling out forms. We also implemented [negative testing](https://en.wikipedia.org/wiki/Negative_testing) in addition to [happy-path testing](https://en.wikipedia.org/wiki/Happy_path) as to showcase the potential for a fully-developed suite.
 ## Here's a YouTube Video
 [That explains our process and reasoning along with a brief walkthrough of a run.](https://www.youtube.com/watch?v=FC6rQWJDpq0&feature=youtu.be)
